@@ -1,0 +1,15 @@
+<h1>Cars, Currently in Inventory:</h1>
+  <h3><em>Sell 'em while they're hot!</em></h3>
+
+<ul>
+  <% if @cars.count == 0 %>
+    <li><h3><a href='/cars/new'>Add the first car!</h3></li>
+  <% else %>
+    <li><a href='/cars/new'>Add car to inventory</a></li>
+  <% end %>
+  <% @cars.each do |car| %>
+    <li><%= car.manufacturer.name %> - <%= car.model_name %></li>
+  <% end %>
+</ul>
+
+<a href='/'>Home</a> | <a href='/manufacturers'>Car Manufacturers We Carry</a>

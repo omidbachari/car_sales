@@ -1,0 +1,15 @@
+<h1>Car Manufacturers We Carry:</h1>
+  <h3><em>We carry the finest brands of car!</em></h3>
+
+<ul>
+  <% if @manufacturers.count == 0 %>
+    <li><h3><a href='manufacturers/new'>Add the first manufacturer!</a></h3></li>
+  <% else %>
+    <li><h3><a href='manufacturers/new'>Add manufacturer.</a></h3></li>
+  <% end %>
+  <% @manufacturers.each do |mfr| %>
+    <li><%= mfr.name %> - <%= mfr.country %></li>
+  <% end %>
+</ul>
+
+<a href='/'>Home</a> | <a href='/cars'>Cars In Inventory</a>

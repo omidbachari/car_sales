@@ -1,0 +1,55 @@
+<h1>Add a car:</h1>
+
+<h3>Reference of Manufacturer ID Numbers</h3>
+  <ul>
+    <% @manufacturers.each do |mfr| %>
+      <li><%= mfr.name %> - <%= mfr.id %></li>
+    <% end %>
+  </ul>
+  <div>
+    <%= form_for @car do |f| %>
+      <div>
+      <% if @car.errors.any? %>
+        <h4>Errors:</h4>
+        <ul>
+          <% @car.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      <% end %>
+      </div>
+
+      <div>
+        <%= f.label :model_name %>
+        <%= f.text_field :model_name %>
+      </div>
+
+      <div>
+        <%= f.label :year %>
+        <%= f.text_field :year %>
+      </div>
+
+      <div>
+        <%= f.label :color %>
+        <%= f.text_field :color %>
+      </div>
+
+      <div>
+        <%= f.label :mileage %>
+        <%= f.text_field :mileage %>
+      </div>
+
+      <div>
+        <%= f.label :manufacturer_id %>
+        <%= f.select(:manufacturer_id, Manufacturer.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'Select a Manufacturer'}) %>
+      </div>
+
+      <div>
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+      </div>
+
+      <%= f.submit 'Submit' %>
+    <% end %>
+  </div>
+  <a href='/cars'>Return to cars without saving</a> | <a href='/'>Home</a> | <a href='/manufacturers'>Car Manufacturers We Carry</a>
