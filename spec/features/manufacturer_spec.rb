@@ -12,24 +12,24 @@ feature '', %Q(
 # Form validations prevent invalid submissions, and acknowledge success when properly submitted.
 # Required fields are name and country.
 
-  scenario 'visit car index and see list of manufacturers' do
+  # scenario 'visit car index and see list of manufacturers' do
 
-  end
+  # end
 
-  scenario 'click on add a manufacturer link and form works' do
+  # scenario 'click on add a manufacturer link and form works' do
 
-  end
+  # end
 
-  scenario 'manufacturer form, name missing' do
+  # scenario 'manufacturer form, name missing' do
 
-  end
+  # end
 
-  scenario 'manufacturer form, country missing' do
+  # scenario 'manufacturer form, country missing' do
 
-  end
+  # end
 
-  scenario 'manufacturer appears in car form dropdown' do
+  # scenario 'manufacturer appears in car form dropdown' do
 
-  end
+  # end
 end
 
