@@ -6,11 +6,12 @@ feature '', %Q(
 
 ) do
 
-# Acceptance Criteria
+  # Acceptance Criteria
 
-# Manufacturers are listed on index with link to form for new cars
-# Form validations prevent invalid submissions, and acknowledge success when properly submitted.
-# Required fields are name and country.
+  # Manufacturers are listed on index with link to form for new cars
+  # Form validations prevent invalid submissions,
+  #   and acknowledge success when properly submitted.
+  # Required fields are name and country.
 
   scenario 'visit car index and see list of manufacturers' do
     attrs = {
@@ -80,4 +81,3 @@ feature '', %Q(
     expect(page).to have_content 'Mercedes Benz'
   end
 end
-

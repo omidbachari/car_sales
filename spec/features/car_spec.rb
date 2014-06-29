@@ -6,13 +6,15 @@ feature '', %Q(
 
 ) do
 
-# Acceptance Criteria
+  # Acceptance Criteria
 
-# Cars are listed on index with link to form for new cars
-# Form validations prevent invalid submissions, and acknowledge success when properly submitted.
-# Required fields are model name, year, color, mileage and manufacturer. Description is optional.
-# Description field is optional.
-# Model year cannot be older than 1920.
+  # Cars are listed on index with link to form for new cars
+  # Form validations prevent invalid submissions,
+  #   and acknowledge success when properly submitted.
+  # Required fields are model name, year, color,
+  #   mileage and manufacturer. Description is optional.
+  # Description field is optional.
+  # Model year cannot be older than 1920.
 
   scenario 'visit car index and see list of cars' do
     attrs = {
@@ -191,4 +193,3 @@ feature '', %Q(
     expect(page).to have_content 'Something went wrong'
   end
 end
-
