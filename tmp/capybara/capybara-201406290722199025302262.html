@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CarSales</title>
+  <link data-turbolinks-track="true" href="/assets/application.css" media="all" rel="stylesheet" />
+  <script data-turbolinks-track="true" src="/assets/application.js"></script>
+  
+</head>
+<body>
+    Something went wrong.
+<h1>Add a car:</h1>
+
+<h3>Reference of Manufacturer ID Numbers</h3>
+  <ul>
+      <li>Mercedes Benz - 25</li>
+  </ul>
+  <div>
+    <form accept-charset="UTF-8" action="/cars" class="new_car" id="new_car" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+      <div>
+        <h4>Errors:</h4>
+        <ul>
+            <li>Year must be greater than or equal to 1920</li>
+        </ul>
+      </div>
+
+      <div>
+        <label for="car_model_name">Model name</label>
+        <input id="car_model_name" name="car[model_name]" type="text" value="SLS AMG" />
+      </div>
+
+      <div>
+        <div class="field_with_errors"><label for="car_year">Year</label></div>
+        <div class="field_with_errors"><input id="car_year" name="car[year]" type="text" value="1200" /></div>
+      </div>
+
+      <div>
+        <label for="car_color">Color</label>
+        <input id="car_color" name="car[color]" type="text" value="Red" />
+      </div>
+
+      <div>
+        <label for="car_mileage">Mileage</label>
+        <input id="car_mileage" name="car[mileage]" type="text" value="30" />
+      </div>
+
+      <div>
+        <label for="car_manufacturer_id">Manufacturer</label>
+        <select id="car_manufacturer_id" name="car[manufacturer_id]"><option value="">Select a Manufacturer</option>
+<option selected="selected" value="25">Mercedes Benz</option></select>
+      </div>
+
+      <div>
+        <label for="car_description">Description</label>
+        <textarea id="car_description" name="car[description]">
+Incredibly fast.</textarea>
+      </div>
+
+      <input name="commit" type="submit" value="Submit" />
+</form>  </div>
+  <a href='/cars'>Return to cars without saving</a> | <a href='/'>Home</a> | <a href='/manufacturers'>Car Manufacturers We Carry</a>
+
+
+</body>
+</html>
